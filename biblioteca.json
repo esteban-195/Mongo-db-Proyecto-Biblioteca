@@ -3,3 +3,34 @@ db.usuario.insertOne({
     nombre: "Juan Pérez",
 email: "juan@example.com",
 telefono: "555-1234",})
+
+
+db.libro.insertOne ({               //SEGUNDO se va a crear el libro y las copias
+_id: "asdfghjkqwertyuizxcvbnmz_100",
+titulo: "Cien años de soledad",
+autor: "Gabriel García Márquez",
+isbn: "978-84-376-0494-7",
+cantidad_ejemplares: 5,
+ejemplares_disponibles: 5,
+ejemplar: [{
+    _id: "asdfghjkqwertyuizxcvbnmz_101",
+    book_id: "book_001",
+    estado: "available",  // available, borrowed, reserved
+    ubicacion: "Estantería A3"
+    },{
+    _id: "asdfghjkqwertyuizxcvbnmz_102",
+    book_id: "book_001",
+    estado: "available",  // available, borrowed, reserved
+    ubicacion: "Estantería A3"
+    },{
+    _id: "asdfghjkqwertyuizxcvbnmz_103",
+    book_id: "book_001",
+    estado: "available",  // available, borrowed, reserved
+    ubicacion: "Estantería A3"
+    },{
+    _id: "asdfghjkqwertyuizxcvbnmz_104",
+    book_id: "book_001",
+    estado: "available",  // available, borrowed, reserved
+    ubicacion: "Estantería A3"
+    }]
+})
