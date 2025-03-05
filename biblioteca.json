@@ -14,22 +14,22 @@ cantidad_ejemplares: 5,
 ejemplares_disponibles: 5,
 ejemplar: [{
     _id: "asdfghjkqwertyuizxcvbnmz_101",
-    book_id: "book_001",
+    book_id: "asdfghjkqwertyuizxcvbnmz_100",
     estado: "available",  // available, borrowed, reserved
     ubicacion: "Estantería A3"
     },{
     _id: "asdfghjkqwertyuizxcvbnmz_102",
-    book_id: "book_001",
+    book_id: "asdfghjkqwertyuizxcvbnmz_100",
     estado: "available",  // available, borrowed, reserved
     ubicacion: "Estantería A3"
     },{
     _id: "asdfghjkqwertyuizxcvbnmz_103",
-    book_id: "book_001",
+    book_id: "asdfghjkqwertyuizxcvbnmz_100",
     estado: "available",  // available, borrowed, reserved
     ubicacion: "Estantería A3"
     },{
     _id: "asdfghjkqwertyuizxcvbnmz_104",
-    book_id: "book_001",
+    book_id: "asdfghjkqwertyuizxcvbnmz_100",
     estado: "available",  // available, borrowed, reserved
     ubicacion: "Estantería A3"
     }]
