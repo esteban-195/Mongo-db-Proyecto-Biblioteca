@@ -1,0 +1,5 @@
+db.usuario.insertOne({
+    _id: "01",
+    nombre: "Juan Pérez",
+email: "juan@example.com",
+telefono: "555-1234",})
