@@ -6,31 +6,62 @@ telefono: "555-1234",})
 
 
 db.libro.insertOne ({               //SEGUNDO se va a crear el libro y las copias
-_id: "asdfghjkqwertyuizxcvbnmz_100",
+_id: "100",
 titulo: "Cien años de soledad",
 autor: "Gabriel García Márquez",
 isbn: "978-84-376-0494-7",
 cantidad_ejemplares: 5,
 ejemplares_disponibles: 5,
 ejemplar: [{
-    _id: "asdfghjkqwertyuizxcvbnmz_101",
-    book_id: "asdfghjkqwertyuizxcvbnmz_100",
+    _id: "0101",
+    book_id: "100",
     estado: "available",  // available, borrowed, reserved
     ubicacion: "Estantería A3"
     },{
-    _id: "asdfghjkqwertyuizxcvbnmz_102",
-    book_id: "asdfghjkqwertyuizxcvbnmz_100",
+    _id: "0102",
+    book_id: "100",
     estado: "available",  // available, borrowed, reserved
     ubicacion: "Estantería A3"
     },{
-    _id: "asdfghjkqwertyuizxcvbnmz_103",
-    book_id: "asdfghjkqwertyuizxcvbnmz_100",
+    _id: "0103",
+    book_id: "100",
     estado: "available",  // available, borrowed, reserved
     ubicacion: "Estantería A3"
     },{
-    _id: "asdfghjkqwertyuizxcvbnmz_104",
-    book_id: "asdfghjkqwertyuizxcvbnmz_100",
+    _id: "0104",
+    book_id: "100",
     estado: "available",  // available, borrowed, reserved
     ubicacion: "Estantería A3"
     }]
+})
+
+db.historial_prestamo.insertOne ({              //CUARTO se va a crear el historial de prestamos
+_id: "0001",
+usuario_id: "01",
+copy_id: "0103",
+libro: "Cien años de soledad",
+fecha_prestamo: "2025-03-02",
+fecha_devolucion: "2025-03-16",
+estado: "active",  // active, returned
+})
+
+
+db.usuario.updateOne (
+    {nombre: "Juan Pérez"},
+    {$push:  {
+        prestamos_activos: {
+            historial_prestamo_id: "0001",   
+            libro_id:"100",
+            ejemplar_id: "0103",
+            libro: "Cien años de soledad",
+            fecha_prestamo: "2025-03-02",
+            fecha_devolucion: "2025-03-16"
+        },
+        reservas_activas: {
+            reserva_id: "50",
+            libro: "50 sombras de gray",
+            fecha_reserva: "2025-03-01",
+            expira: "2025-03-03"
+        }
+    }
 })
